@@ -20,11 +20,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getSupportActionBar().hide();
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        getSupportActionBar().hide();
+//        getActionBar().hide();
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-//        getActionBar().hide();
+
 
 
         BottomNavigationView navView = findViewById(R.id.nav_view);

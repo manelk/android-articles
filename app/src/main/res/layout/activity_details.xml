@@ -40,9 +40,9 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="@drawable/rounded_button"
+                android:contentDescription="@string/back_button_desc"
                 android:gravity="center_vertical|center_horizontal"
                 android:src="@drawable/ic_arrow_back_24_white"
-                android:contentDescription="@string/back_button_desc"
                 android:textColor="#fff"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -57,9 +57,9 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="@drawable/rounded_button"
+                android:contentDescription="@string/more_btn_desc"
                 android:gravity="center_vertical|center_horizontal"
                 android:src="@drawable/ic_more_horiz_24_white"
-                android:contentDescription="@string/more_btn_desc"
                 android:textColor="#fff"
                 tools:ignore="SpeakableTextPresentCheck" />
 
