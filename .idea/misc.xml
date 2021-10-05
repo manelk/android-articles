@@ -5,8 +5,12 @@
       <map>
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/activity_details.xml" value="0.17255434782608695" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/activity_main.xml" value="0.1334853090172239" />
-        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/home_fragment.xml" value="0.11322463768115942" />
+        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/article_card.xml" value="0.2296195652173913" />
+        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/home_fragment.xml" value="0.176" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/most_popular.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/recommended_blogs.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/search_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/search_view_layout.xml" value="0.22509057971014493" />
         <entry key="app/src/main/res/drawable/ic__bookmark_border_24.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_arrow_back_24.xml" value="0.10520833333333333" />
         <entry key="app/src/main/res/drawable/rounded_button.xml" value="0.209375" />

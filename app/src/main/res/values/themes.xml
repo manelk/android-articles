@@ -22,4 +22,5 @@
     <style name="Theme.ArticlesProject.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark" />
 
     <style name="Theme.ArticlesProject.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>
