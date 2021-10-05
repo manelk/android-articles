@@ -46,7 +46,6 @@
                 android:textColor="#fff"
                 tools:ignore="SpeakableTextPresentCheck" />
 
-
             <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
@@ -83,6 +82,7 @@
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="18sp"
         android:text="@string/details_text"
         android:layout_marginHorizontal="15dp"
         app:layout_constraintEnd_toEndOf="parent"
