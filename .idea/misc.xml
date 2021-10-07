@@ -14,17 +14,20 @@
         <entry key="app/src/main/res/drawable/ic__bookmark_border_24.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_arrow_back_24.xml" value="0.10520833333333333" />
         <entry key="app/src/main/res/drawable/rounded_button.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.209375" />
         <entry key="app/src/main/res/layout/activity_details.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.11458333333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/article_card.xml" value="0.1838768115942029" />
         <entry key="app/src/main/res/layout/book_marks_fragment.xml" value="0.11458333333333333" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.1" />
         <entry key="app/src/main/res/layout/home_fragment.xml" value="0.1838768115942029" />
         <entry key="app/src/main/res/layout/most_popular.xml" value="0.17527173913043478" />
-        <entry key="app/src/main/res/layout/profile_fragment.xml" value="0.11458333333333333" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/profile_fragment.xml" value="0.21" />
         <entry key="app/src/main/res/layout/recommended_blogs.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/search_fragment.xml" value="0.11458333333333333" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/menu/drawer_menu.xml" value="0.1" />
       </map>
     </option>
   </component>

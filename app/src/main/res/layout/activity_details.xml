@@ -58,7 +58,7 @@
                 android:background="@drawable/rounded_button"
                 android:contentDescription="@string/more_btn_desc"
                 android:gravity="center_vertical|center_horizontal"
-                android:src="@drawable/ic_more_horiz_24_white"
+                android:src="@drawable/ic__bookmark_border_24"
                 android:textColor="#fff"
                 tools:ignore="SpeakableTextPresentCheck" />
 
