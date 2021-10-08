@@ -36,6 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/profile_name00" />
+
+
 </androidx.appcompat.widget.LinearLayoutCompat>
 
             <View
@@ -45,15 +47,25 @@
 
 <!--more btn -->
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/bookmark_btn"-->
-<!--                    android:layout_width="33dp"-->
-<!--                    android:layout_height="33dp"-->
-<!--                    android:contentDescription="@string/back_button_desc"-->
-<!--                    android:gravity="center_vertical|center_horizontal"-->
-<!--                    android:src="@drawable/ic_more_horiz_24_black"-->
-<!--                    android:textColor="#fff"-->
-<!--                    tools:ignore="SpeakableTextPresentCheck" />-->
+                <ImageView
+                    android:id="@+id/bookmark_btn"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:contentDescription="@string/back_button_desc"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:src="@drawable/ic__bookmark_border_24"
+                    android:textColor="#fff"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/share_btn"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:contentDescription="@string/back_button_desc"
+                android:gravity="center_vertical|center_horizontal"
+                android:src="@drawable/ic_baseline_share_24"
+                android:textColor="#fff"
+                tools:ignore="SpeakableTextPresentCheck" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
