@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:textSize="20sp"
-            android:text="All"
+            android:text="View All"
             />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
