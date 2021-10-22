@@ -10,9 +10,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.articlesproject.DetailsActivity;
+import com.example.articlesproject.ui.details.DetailsActivity;
 import com.example.articlesproject.R;
 import com.example.articlesproject.databinding.HomeFragmentBinding;
+import com.example.articlesproject.ui.user.UserActivity;
 
 public class HomeFragment extends Fragment {
 
@@ -28,7 +29,6 @@ public class HomeFragment extends Fragment {
         View root = binding.getRoot();
 
         final View firstArticle = binding.getRoot().findViewById(R.id.first_article);
-
         firstArticle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,6 +36,7 @@ public class HomeFragment extends Fragment {
                 startActivity(detailIntent);
             }
         });
+
 
 //        final TextView textView = binding.textHome;
 //        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {

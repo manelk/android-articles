@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ArticlesProject">
         <activity
-            android:name=".DetailsActivity"
+            android:name=".ui.details.DetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.user.UserActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

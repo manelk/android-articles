@@ -1,7 +1,9 @@
 package com.example.articlesproject.ui.profile;
 
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.articlesproject.R;
+import com.example.articlesproject.ui.user.UserActivity;
 
 public class ProfileFragment extends Fragment {
 
@@ -25,7 +28,17 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.profile_fragment, container, false);
+
+        View root = inflater.inflate(R.layout.profile_fragment, container, false);
+      LinearLayoutCompat  my_account_row = (LinearLayoutCompat) root.findViewById(R.id.my_account_row);
+
+      my_account_row.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              startActivity(new Intent(getContext(), UserActivity.class));
+          }
+      });
+        return root;
     }
 
     @Override
