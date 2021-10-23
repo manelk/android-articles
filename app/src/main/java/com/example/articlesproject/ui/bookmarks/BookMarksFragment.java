@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,7 +16,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.articlesproject.R;
-import com.example.articlesproject.model.Bookmark;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,18 +35,22 @@ public class BookMarksFragment extends Fragment {
         View root = inflater.inflate(R.layout.book_marks_fragment, container, false);
         recyclerView = (RecyclerView) root.findViewById(R.id.bookmarks_recycler);
 
-        Bookmark bookmark = new Bookmark("10 Web Application Ideas for Businesses", "DevWerkz", R.drawable.old_women_dog);
-        Bookmark bookmark1 = new Bookmark("10 Web Application  for Businesses", "DevWerkz", R.drawable.old_women_dog);
-        Bookmark bookmark2 = new Bookmark("10 Web  Ideas for Businesses", "DevWerkz", R.drawable.old_women_dog);
+//       Recyclerview divider
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
+        recyclerView.addItemDecoration(dividerItemDecoration);
+
+        BookmarkModel bookmarkModel = new BookmarkModel("10 Web Application Ideas for Businesses", "DevWerkz", R.drawable.old_women_dog);
+        BookmarkModel bookmarkModel1 = new BookmarkModel("10 Web Application  for Businesses", "DevWerkz", R.drawable.old_women_dog);
+        BookmarkModel bookmarkModel2 = new BookmarkModel("10 Web  Ideas for Businesses", "DevWerkz", R.drawable.old_women_dog);
 
 
-        List<Bookmark> bookmarksData = new ArrayList<>();
-        bookmarksData.add(bookmark);
-        bookmarksData.add(bookmark1);
-        bookmarksData.add(bookmark2);
-        bookmarksData.add(bookmark);
-        bookmarksData.add(bookmark1);
-        bookmarksData.add(bookmark2);
+        List<BookmarkModel> bookmarksData = new ArrayList<>();
+        bookmarksData.add(bookmarkModel);
+        bookmarksData.add(bookmarkModel1);
+        bookmarksData.add(bookmarkModel2);
+        bookmarksData.add(bookmarkModel);
+        bookmarksData.add(bookmarkModel1);
+        bookmarksData.add(bookmarkModel2);
 
         CustomAdapter adapter = new CustomAdapter(bookmarksData);
         recyclerView.setHasFixedSize(true);

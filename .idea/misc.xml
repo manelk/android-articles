@@ -16,15 +16,20 @@
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/recommended_blogs.xml" value="0.22509057971014493" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/search_fragment.xml" value="0.264" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/search_view_layout.xml" value="0.22509057971014493" />
+        <entry key="app/src/main/res/drawable/buttton_rounded.xml" value="0.10520833333333333" />
         <entry key="app/src/main/res/drawable/ic__bookmark_border_24.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_arrow_back_24.xml" value="0.10520833333333333" />
         <entry key="app/src/main/res/drawable/rounded_button.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.209375" />
+        <entry key="app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.12416331994645248" />
+        <entry key="app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.1448087431693989" />
         <entry key="app/src/main/res/layout/activity_details.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_user.xml" value="0.19202898550724637" />
         <entry key="app/src/main/res/layout/article_card.xml" value="0.1838768115942029" />
         <entry key="app/src/main/res/layout/book_marks_fragment.xml" value="0.25" />
         <entry key="app/src/main/res/layout/bookmark_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/content_scrolling.xml" value="0.1766304347826087" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.1" />
         <entry key="app/src/main/res/layout/home_fragment.xml" value="0.1838768115942029" />
         <entry key="app/src/main/res/layout/most_popular.xml" value="0.17527173913043478" />
@@ -34,6 +39,8 @@
         <entry key="app/src/main/res/layout/search_fragment.xml" value="0.11458333333333333" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/menu/drawer_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/menu_user.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/menu/top_app_bar.xml" value="0.19322916666666667" />
       </map>
     </option>
   </component>
