@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,6 +34,10 @@ public class BookMarksFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.book_marks_fragment, container, false);
         recyclerView = (RecyclerView) root.findViewById(R.id.bookmarks_recycler);
+
+//       Recyclerview divider
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
+        recyclerView.addItemDecoration(dividerItemDecoration);
 
         BookmarkModel bookmarkModel = new BookmarkModel("10 Web Application Ideas for Businesses", "DevWerkz", R.drawable.old_women_dog);
         BookmarkModel bookmarkModel1 = new BookmarkModel("10 Web Application  for Businesses", "DevWerkz", R.drawable.old_women_dog);

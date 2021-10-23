@@ -1,4 +1,4 @@
-package com.example.articlesproject;
+package com.example.articlesproject.ui.details;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.widget.ImageButton;
+
+import com.example.articlesproject.MainActivity;
+import com.example.articlesproject.R;
 
 import java.util.Objects;
 
