@@ -39,12 +39,8 @@
         <!--        Rows-->
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/my_account_row"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingHorizontal="15dp"
-            android:paddingTop="15dp"
+
+            style="@style/profile_row"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profile_row">
@@ -78,12 +74,7 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/interests_row"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingHorizontal="15dp"
-            android:paddingTop="15dp"
+            style="@style/profile_row"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/my_account_row">
@@ -121,12 +112,8 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/settings_row"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingHorizontal="15dp"
-            android:paddingTop="15dp"
+            style="@style/profile_row"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/interests_row">
@@ -162,11 +149,8 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/logout_row"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingHorizontal="15dp"
-            android:paddingTop="15dp"
+            style="@style/profile_row"
+            android:gravity="start"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/settings_row">
@@ -193,19 +177,14 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/feed_back_row"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingHorizontal="15dp"
-            android:paddingTop="15dp"
-            app:flow_verticalAlign="center"
+            android:gravity="start"
+            style="@style/profile_row"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logout_row">
 
             <ImageButton
                 android:layout_width="48dp"
-
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="TODO"
@@ -224,19 +203,14 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/privacy_policy_row"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingHorizontal="15dp"
-            android:paddingTop="15dp"
-
+            android:gravity="start"
+            style="@style/profile_row"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/feed_back_row">
 
             <ImageButton
                 android:layout_width="48dp"
-
                 android:layout_height="48dp"
                 android:background="@null"
                 android:contentDescription="TODO"

@@ -9,16 +9,24 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.articlesproject.model.Popular;
 import com.example.articlesproject.ui.details.DetailsActivity;
 import com.example.articlesproject.R;
 import com.example.articlesproject.databinding.HomeFragmentBinding;
 import com.example.articlesproject.ui.user.UserActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     private HomeFragmentBinding binding;
+
+    private RecyclerView categoryRecycler, popular_recycler_view;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -28,23 +36,39 @@ public class HomeFragment extends Fragment {
         binding = HomeFragmentBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final View firstArticle = binding.getRoot().findViewById(R.id.first_article);
-        firstArticle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent detailIntent = new Intent(getContext(), DetailsActivity.class);
-                startActivity(detailIntent);
-            }
-        });
+//        categories
+        categoryRecycler = root.findViewById(R.id.category_recycler);
+
+        List<String> categories = new ArrayList<>();
+        categories.add("Tech");
+        categories.add("Sport");
+        categories.add("Entertainment");
+        categories.add("News");
+        categories.add("Business");
+        categories.add("Productivity");
 
 
-//        final TextView textView = binding.textHome;
-//        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
+        CategoryAdapter categoryAdapter = new CategoryAdapter(categories);
+
+        categoryRecycler.setHasFixedSize(true);
+        categoryRecycler.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        categoryRecycler.setAdapter(categoryAdapter);
+
+
+//        popular
+        popular_recycler_view = root.findViewById(R.id.popular_recycler_view);
+
+        List<Popular> popular_data = new ArrayList<>();
+        popular_data.add(new Popular("title1", "name1", "14h", "Sports", "255", R.drawable.dogs, R.drawable.profile00));
+        popular_data.add(new Popular("title2", "name2", "1h", "Productivity", "20", R.drawable.dogs, R.drawable.profile01));
+        popular_data.add(new Popular("title3", "name3", "24h", "Tech", "30", R.drawable.dogs, R.drawable.profile04));
+
+        PopularAdapter popularAdapter = new PopularAdapter(popular_data);
+
+        popular_recycler_view.setHasFixedSize(true);
+        popular_recycler_view.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        popular_recycler_view.setAdapter(popularAdapter);
+
         return root;
     }
 
