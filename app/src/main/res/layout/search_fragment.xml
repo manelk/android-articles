@@ -106,7 +106,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -125,12 +124,12 @@
                 android:layout_height="wrap_content" />
 
             <include
-                layout="@layout/recommended_blogs"
+                layout="@layout/bookmark_item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <include
-                layout="@layout/recommended_blogs"
+                layout="@layout/bookmark_item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
