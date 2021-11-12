@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.articlesproject.R;
+import com.example.articlesproject.model.Bookmark;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,12 +40,12 @@ public class BookMarksFragment extends Fragment {
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(dividerItemDecoration);
 
-        BookmarkModel bookmarkModel = new BookmarkModel("10 Web Application Ideas for Businesses", "DevWerkz", R.drawable.old_women_dog);
-        BookmarkModel bookmarkModel1 = new BookmarkModel("10 Web Application  for Businesses", "DevWerkz", R.drawable.old_women_dog);
-        BookmarkModel bookmarkModel2 = new BookmarkModel("10 Web  Ideas for Businesses", "DevWerkz", R.drawable.old_women_dog);
+        Bookmark bookmarkModel = new Bookmark("10 Web Application Ideas for Businesses", "DevWerkz", R.drawable.old_women_dog);
+        Bookmark bookmarkModel1 = new Bookmark("10 Web Application  for Businesses", "DevWerkz", R.drawable.old_women_dog);
+        Bookmark bookmarkModel2 = new Bookmark("10 Web  Ideas for Businesses", "DevWerkz", R.drawable.old_women_dog);
 
 
-        List<BookmarkModel> bookmarksData = new ArrayList<>();
+        List<Bookmark> bookmarksData = new ArrayList<>();
         bookmarksData.add(bookmarkModel);
         bookmarksData.add(bookmarkModel1);
         bookmarksData.add(bookmarkModel2);
