@@ -1,16 +1,24 @@
 package com.example.articlesproject.ui.bookmarks;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.articlesproject.R;
+import com.example.articlesproject.model.Article;
 import com.example.articlesproject.model.Bookmark;
+import com.example.articlesproject.ui.details.DetailsActivity;
+
+import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,11 +26,11 @@ import java.util.List;
 public class CustomAdapter  extends RecyclerView.Adapter<CustomAdapter.ViewHolder>{
 
 
-    private List<Bookmark> bookmarks = new ArrayList<>();
+    private List<Article> bookmarks = new ArrayList<>();
 
 
 
-    public CustomAdapter(List<Bookmark> bookmarks) {
+    public CustomAdapter(List<Article> bookmarks) {
         this.bookmarks = bookmarks;
     }
 
@@ -37,10 +45,15 @@ public class CustomAdapter  extends RecyclerView.Adapter<CustomAdapter.ViewHolde
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final Bookmark bookmark = bookmarks.get(position);
+        final Article bookmark = bookmarks.get(position);
         holder.title.setText(bookmark.getTitle());
-        holder.author.setText(bookmark.getAuthor());
-        holder.image.setImageResource(bookmark.getImage());
+        holder.author.setText(bookmark.getName());
+        holder.image.setImageResource(bookmark.getCoverImage());
+        holder.type.setText(bookmark.getCategory());
+        holder.stars.setText(bookmark.getStars());
+
+//actions
+        holder.goToDetails(bookmark);
     }
 
     @Override
@@ -52,7 +65,7 @@ public class CustomAdapter  extends RecyclerView.Adapter<CustomAdapter.ViewHolde
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private final TextView author, title;
+        private final TextView author, title, type, stars;
         private final ImageView image;
 
         public ViewHolder(@NonNull View itemView) {
@@ -60,7 +73,30 @@ public class CustomAdapter  extends RecyclerView.Adapter<CustomAdapter.ViewHolde
             author = itemView.findViewById(R.id.ba_author_name);
             title = itemView.findViewById(R.id.ba_title);
             image = itemView.findViewById(R.id.ba_image);
+            type = itemView.findViewById(R.id.post_type);
+            stars = itemView.findViewById(R.id.post_stars);
+}
+
+public void goToDetails(Article selected){
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent detailIntent = new Intent(author.getContext() , DetailsActivity.class);
+                    try {
+                        detailIntent.putExtra("data", selected.toJson().toString());
+                        author.getContext().startActivity(detailIntent);
+
+                    } catch (JSONException e) {
+//                    e.printStackTrace();
+                        Toast.makeText(author.getContext(), "" + e, Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            });
+
+
         }
+
     }
 }
 

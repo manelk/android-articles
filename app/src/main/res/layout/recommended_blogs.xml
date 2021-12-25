@@ -7,6 +7,7 @@
     android:paddingTop="15dp"
     android:paddingStart="15dp"
     android:paddingEnd="15dp"
+    android:id="@+id/recommended_card"
     >
 
     <androidx.appcompat.widget.LinearLayoutCompat
