@@ -1,6 +1,5 @@
 package com.example.articlesproject.ui.home;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,11 +11,9 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.articlesproject.model.Popular;
-import com.example.articlesproject.ui.details.DetailsActivity;
+import com.example.articlesproject.model.Article;
 import com.example.articlesproject.R;
 import com.example.articlesproject.databinding.HomeFragmentBinding;
-import com.example.articlesproject.ui.user.UserActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +23,7 @@ public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
     private HomeFragmentBinding binding;
 
-    private RecyclerView categoryRecycler, popular_recycler_view;
+    private RecyclerView categoryRecycler, popular_recycler_view, recent_recycler_view;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -58,16 +55,31 @@ public class HomeFragment extends Fragment {
 //        popular
         popular_recycler_view = root.findViewById(R.id.popular_recycler_view);
 
-        List<Popular> popular_data = new ArrayList<>();
-        popular_data.add(new Popular("title1", "name1", "14h", "Sports", "255", R.drawable.dogs, R.drawable.profile00));
-        popular_data.add(new Popular("title2", "name2", "1h", "Productivity", "20", R.drawable.dogs, R.drawable.profile01));
-        popular_data.add(new Popular("title3", "name3", "24h", "Tech", "30", R.drawable.dogs, R.drawable.profile04));
+        List<Article> data = new ArrayList<>();
+        data.add(new Article("Why the Last Week of the Year is Crucial to Our Success", "Rachella Angel", "14h", "Time Management", "50", R.drawable.rachella_article_cover, R.drawable.profile00, "I have always loved the last week of the year, the closing of one book leading to the opening of the next one. However, I’ve been pickier about using the time given in the past few years. While I try to make the best of every day, I focus on this week, maybe more than other weeks of the year. So here are three ways to make the best use of the transition period.", R.drawable.rachella_body_image));
+        data.add(new Article("How to Read More as a Working Parent", "Alison McBain", "1h", "Reading", "20", R.drawable.alison_cover_image, R.drawable.profile01, "A decade ago, I used to read a book a day. And now I’m wondering how I did it since there never seems to be enough time in the day to just breathe." +
+                "Of course, that was before distractions such as kids, freelance working from home, streaming TV, and did I mention kids? Back then, my life was simpler and the sections of it were more compartmentalized— go to work, come home, read a book to relax." +
+                "Many of the writers I know are procrastinators, and maybe that’s a part of my problem, too. When the kitchen could use cleaning, I work on my manuscript. When I have a deadline to write a story, I clean the kitchen. Eventually, everything gets done, but usually not in the order that I’m supposed to be doing it.", R.drawable.alison_body_image));
+        data.add(new Article("Product Manager vs. Project Manager vs. Technical Program Manager", "Julius Uy", "24h", "Product Management", "30", R.drawable.julius_body_image, R.drawable.profile04, "A decade ago, I used to read a book a day. And now I’m wondering how I did it since there never seems to be enough time in the day to just breathe.\n" +
+                "Of course, that was before distractions such as kids, freelance working from home, streaming TV, and did I mention kids? Back then, my life was simpler and the sections of it were more compartmentalized— go to work, come home, read a book to relax." +
+                "Many of the writers I know are procrastinators, and maybe that’s a part of my problem, too. When the kitchen could use cleaning, I work on my manuscript. When I have a deadline to write a story, I clean the kitchen. Eventually, everything gets done, but usually not in the order that I’m supposed to be doing it.", R.drawable.julius_body_image));
 
-        PopularAdapter popularAdapter = new PopularAdapter(popular_data);
+        PopularAdapter popularAdapter = new PopularAdapter(data);
 
         popular_recycler_view.setHasFixedSize(true);
         popular_recycler_view.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         popular_recycler_view.setAdapter(popularAdapter);
+
+
+// Recent
+        recent_recycler_view = root.findViewById(R.id.recent_recycler_view);
+
+        RecentAdapter recentAdapter = new RecentAdapter(data);
+
+        recent_recycler_view.setHasFixedSize(true);
+        recent_recycler_view.setLayoutManager(new LinearLayoutManager(getContext()));
+        recent_recycler_view.setAdapter(recentAdapter);
+
 
         return root;
     }

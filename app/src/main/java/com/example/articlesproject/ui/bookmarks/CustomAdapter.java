@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.articlesproject.R;
+import com.example.articlesproject.model.Article;
 import com.example.articlesproject.model.Bookmark;
 
 import java.util.ArrayList;
@@ -18,11 +19,11 @@ import java.util.List;
 public class CustomAdapter  extends RecyclerView.Adapter<CustomAdapter.ViewHolder>{
 
 
-    private List<Bookmark> bookmarks = new ArrayList<>();
+    private List<Article> bookmarks = new ArrayList<>();
 
 
 
-    public CustomAdapter(List<Bookmark> bookmarks) {
+    public CustomAdapter(List<Article> bookmarks) {
         this.bookmarks = bookmarks;
     }
 
@@ -37,10 +38,12 @@ public class CustomAdapter  extends RecyclerView.Adapter<CustomAdapter.ViewHolde
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final Bookmark bookmark = bookmarks.get(position);
+        final Article bookmark = bookmarks.get(position);
         holder.title.setText(bookmark.getTitle());
-        holder.author.setText(bookmark.getAuthor());
-        holder.image.setImageResource(bookmark.getImage());
+        holder.author.setText(bookmark.getName());
+        holder.image.setImageResource(bookmark.getCoverImage());
+        holder.type.setText(bookmark.getCategory());
+        holder.stars.setText(bookmark.getStars());
     }
 
     @Override
@@ -52,7 +55,7 @@ public class CustomAdapter  extends RecyclerView.Adapter<CustomAdapter.ViewHolde
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private final TextView author, title;
+        private final TextView author, title, type, stars;
         private final ImageView image;
 
         public ViewHolder(@NonNull View itemView) {
@@ -60,6 +63,8 @@ public class CustomAdapter  extends RecyclerView.Adapter<CustomAdapter.ViewHolde
             author = itemView.findViewById(R.id.ba_author_name);
             title = itemView.findViewById(R.id.ba_title);
             image = itemView.findViewById(R.id.ba_image);
+            type = itemView.findViewById(R.id.post_type);
+            stars = itemView.findViewById(R.id.post_stars);
         }
     }
 }

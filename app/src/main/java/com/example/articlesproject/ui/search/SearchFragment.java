@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.articlesproject.R;
+import com.example.articlesproject.model.Article;
 import com.example.articlesproject.model.Recomended;
 import com.example.articlesproject.ui.home.CategoryAdapter;
 
@@ -55,21 +56,12 @@ public class SearchFragment extends Fragment {
 
     //Recommended
         recommendedRecycler = root.findViewById(R.id.recomended_recycler_view);
-        List<Recomended> data = new ArrayList<>();
 
-//        Nahna nesta3mloo style ki tabda 3ana nafs les prorprietes yet3awdoo
-        // mesh besh zeda n centraliziw les styles wahdhom? genre menghir f west XML -- outside ?
-//        mantsawerch aala khater bech twali barcha
-        // oki mela taw nekhdmou kein ali yetawdou? kima cards, recommended hajet akeika ?
-//        kima receycler view
-//        aando width: much parent fi lkol
-//        fhemtha
-//        ok hani bech nekhdemha
+        List<Article> data = new ArrayList<>();
+        data.add(new Article("Why the Last Week of the Year is Crucial to Our Success", "Rachella Angel", "14h", "Time Management", "50", R.drawable.rachella_article_cover, R.drawable.profile00, "TESTTTT", R.drawable.rachella_body_image));
+        data.add(new Article("How to Read More as a Working Parent", "Alison McBain", "1h", "Reading", "20", R.drawable.alison_cover_image, R.drawable.profile01, "TESTTTT", R.drawable.alison_body_image));
+        data.add(new Article("Product Manager vs. Project Manager vs. Technical Program Manager", "Julius Uy", "24h", "Product Management", "30", R.drawable.julius_body_image, R.drawable.profile04, "TESTTTT", R.drawable.julius_body_image));
 
-        data.add(new Recomended(R.drawable.profile04, R.drawable.dogs, "Med", "HELLO WORLD!"));
-        data.add(new Recomended(R.drawable.profile04, R.drawable.dogs, "Dan", "Its a title!"));
-        data.add(new Recomended(R.drawable.profile02, R.drawable.dogs, "Nix", "Its a title2!"));
-        data.add(new Recomended(R.drawable.profile00, R.drawable.dogs, "DOe", "Its a title2096!"));
 
         RecommendedAdapter recommendedAdapter = new RecommendedAdapter(data);
 

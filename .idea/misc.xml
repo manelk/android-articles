@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/drawable/bg_rounded.xml" value="0.2791666666666667" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/activity_details.xml" value="0.17255434782608695" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/activity_main.xml" value="0.1334853090172239" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/activity_user.xml" value="0.176" />
@@ -11,14 +12,20 @@
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/book_marks_fragment.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/bookmark_item.xml" value="0.264" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/category_item.xml" value="0.27445652173913043" />
-        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/home_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/home_fragment.xml" value="0.25" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/most_popular.xml" value="0.17255434782608695" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/nav_header_main.xml" value="0.13697916666666668" />
+        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/popular_article_item.xml" value="0.259963768115942" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/profile_fragment.xml" value="0.2" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/recent_frame.xml" value="0.271286231884058" />
+        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/recent_item.xml" value="0.10733695652173914" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/recommended_blogs.xml" value="0.22509057971014493" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/search_fragment.xml" value="0.264" />
         <entry key="..\:/Users/manelk/android-articles/app/src/main/res/layout/search_view_layout.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/menu/bottom_nav_menu.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/menu/drawer_menu.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/menu/menu_user.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/manelk/android-articles/app/src/main/res/menu/top_app_bar.xml" value="0.27447916666666666" />
         <entry key="app/src/main/res/drawable/ic__bookmark_border_24.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_arrow_back_24.xml" value="0.10520833333333333" />
         <entry key="app/src/main/res/drawable/rounded_button.xml" value="0.209375" />

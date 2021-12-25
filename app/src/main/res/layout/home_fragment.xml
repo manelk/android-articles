@@ -16,6 +16,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/category_recycler"
         style="@style/recycler_standard"
+        android:paddingTop="10dp"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -87,6 +88,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

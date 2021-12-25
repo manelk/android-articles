@@ -1,26 +1,31 @@
 package com.example.articlesproject.ui.home;
 
-import android.media.Image;
+import android.content.Intent;
+import android.telecom.Call;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.articlesproject.R;
-import com.example.articlesproject.model.Popular;
-import com.google.android.material.chip.Chip;
+import com.example.articlesproject.model.Article;
+import com.example.articlesproject.ui.details.DetailsActivity;
+
+import org.json.JSONException;
 
 import java.util.List;
 
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHolder> {
 
-    List<Popular> data;
+    List<Article> data;
 
-    public PopularAdapter(List<Popular> data) {
+    public PopularAdapter(List<Article> data) {
         this.data = data;
     }
 
@@ -28,14 +33,14 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.article_card, parent, false);
+                .inflate(R.layout.popular_article_item, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Popular pp = data.get(position);
+        Article pp = data.get(position);
 
         holder.profileImage.setImageResource(pp.getProfileImage());
         holder.coverImage.setImageResource(pp.getCoverImage());
@@ -44,6 +49,27 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
         holder.createdAt.setText(pp.getCreatedAt());
         holder.category.setText(pp.getCategory());
         holder.stars.setText(pp.getStars());
+
+        holder.popularCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent detailIntent = new Intent(holder.popularCard.getContext() , DetailsActivity.class);
+
+                try {
+                    detailIntent.putExtra("data", pp.toJson().toString());
+                    holder.popularCard.getContext().startActivity(detailIntent);
+
+                } catch (JSONException e) {
+//                    e.printStackTrace();
+                    Toast.makeText(holder.popularCard.getContext(), "" + e, Toast.LENGTH_SHORT).show();
+                }
+
+
+
+
+            }
+        });
     }
 
     @Override
@@ -54,8 +80,13 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
     public  class ViewHolder extends RecyclerView.ViewHolder{
         public ImageView coverImage, profileImage;
         public TextView name, title, createdAt, category, stars;
+
+        public ConstraintLayout popularCard;
+
         public ViewHolder(@NonNull View item) {
             super(item);
+            popularCard = item.findViewById(R.id.popular_card);
+
             stars = item.findViewById(R.id.post_likes);
             category = item.findViewById(R.id.post_type);
             createdAt = item.findViewById(R.id.post_date);
