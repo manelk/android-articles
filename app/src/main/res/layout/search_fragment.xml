@@ -17,7 +17,7 @@
             android:layout_margin="5dp"
             android:iconifiedByDefault="false"
             android:queryHint="Search Here"
-android:background="@drawable/bg_rounded"
+            android:background="@drawable/rectange_purple_200"
             app:layout_constraintCircleRadius="25dp"
             app:circularflow_radiusInDP="15dp"
             app:layout_constraintEnd_toEndOf="parent"

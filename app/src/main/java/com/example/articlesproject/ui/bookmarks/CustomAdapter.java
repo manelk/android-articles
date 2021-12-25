@@ -1,17 +1,24 @@
 package com.example.articlesproject.ui.bookmarks;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.articlesproject.R;
 import com.example.articlesproject.model.Article;
 import com.example.articlesproject.model.Bookmark;
+import com.example.articlesproject.ui.details.DetailsActivity;
+
+import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +51,9 @@ public class CustomAdapter  extends RecyclerView.Adapter<CustomAdapter.ViewHolde
         holder.image.setImageResource(bookmark.getCoverImage());
         holder.type.setText(bookmark.getCategory());
         holder.stars.setText(bookmark.getStars());
+
+//actions
+        holder.goToDetails(bookmark);
     }
 
     @Override
@@ -65,7 +75,28 @@ public class CustomAdapter  extends RecyclerView.Adapter<CustomAdapter.ViewHolde
             image = itemView.findViewById(R.id.ba_image);
             type = itemView.findViewById(R.id.post_type);
             stars = itemView.findViewById(R.id.post_stars);
+}
+
+public void goToDetails(Article selected){
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent detailIntent = new Intent(author.getContext() , DetailsActivity.class);
+                    try {
+                        detailIntent.putExtra("data", selected.toJson().toString());
+                        author.getContext().startActivity(detailIntent);
+
+                    } catch (JSONException e) {
+//                    e.printStackTrace();
+                        Toast.makeText(author.getContext(), "" + e, Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            });
+
+
         }
+
     }
 }
 

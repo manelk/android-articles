@@ -94,17 +94,7 @@ public class RecommendedAdapter extends  RecyclerView.Adapter<RecommendedAdapter
         recommended_card = itemView.findViewById(R.id.recommended_card);
 
 
-        void click() {
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
 
-//                to details page
-
-                }
-            });
-
-        }
     }
 }
 

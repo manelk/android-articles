@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingHorizontal="15dp"
-    android:paddingVertical="15dp">
+    android:paddingVertical="15dp"
+    android:id="@+id/bookmark_card">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/bookmark_header"
