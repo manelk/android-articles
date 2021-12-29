@@ -63,10 +63,10 @@ public class RecentAdapter  extends RecyclerView.Adapter<RecentAdapter.ViewHolde
         public TextView name, title;
         public ViewHolder(@NonNull View item) {
             super(item);
-            title = item.findViewById(R.id.post_title);
-            name = item.findViewById(R.id.user_name);
-            coverImage = item.findViewById(R.id.coverImage);
-            profileImage = item.findViewById(R.id.user_image);
+            title = item.findViewById(R.id.tv_post_title_recent);
+            name = item.findViewById(R.id.tv_username_recent);
+            coverImage = item.findViewById(R.id.image_cover_recent);
+            profileImage = item.findViewById(R.id.image_user_recent);
         }
     }
 }

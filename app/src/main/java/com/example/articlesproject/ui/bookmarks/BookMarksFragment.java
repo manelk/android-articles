@@ -34,7 +34,7 @@ public class BookMarksFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.book_marks_fragment, container, false);
-        recyclerView = (RecyclerView) root.findViewById(R.id.bookmarks_recycler);
+        recyclerView = (RecyclerView) root.findViewById(R.id.rv_bookmarks);
 
 //       Recyclerview divider
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);

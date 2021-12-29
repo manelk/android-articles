@@ -141,6 +141,26 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="article_star">⭐</string>
+    <string name="icon_bookmark_description">bookmark icon</string>
+    <string name="stars_total_number">239</string>
+    <string name="article_category">sport</string>
+    <string name="details_main_image">TODO</string>
+    <string name="details_cover_image">Cover Image</string>
+    <string name="share_button_description">Share button</string>
+    <string name="bookmark_button_description">Bookmark button description</string>
+    <string name="most_recent_title">Most Recent</string>
+    <string name="view_all_filter">View All</string>
+    <string name="cover_image_recent">Cover image recent</string>
+    <string name="article_title_popular">Dog owners live Long and are more protected from danger</string>
+    <string name="article_stars_number">239</string>
+    <string name="image_cover_popular">Image cover popular</string>
+    <string name="article_hours_read">14h</string>
+    <string name="username_text">01 Syergy</string>
+    <string name="btn_follow_user">Follow</string>
+    <string name="total_followers">1200 Followers</string>
+    <string name="image_back_btn">TODO</string>
+    <string name="cd_image_recommended_cover">TODO</string>
 
 
 </resources>

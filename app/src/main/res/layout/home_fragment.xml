@@ -10,11 +10,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingStart="15dp"
+    android:paddingEnd="15dp"
     >
 <!--category ships-->
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/category_recycler"
+        android:id="@+id/rv_category"
         style="@style/recycler_standard"
         android:paddingTop="10dp"
         app:layout_constraintHorizontal_bias="1.0"
@@ -24,17 +25,17 @@
 
     <!--    Popular-->
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/popular_row"
+        android:id="@+id/ll_popular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/category_recycler"
+        app:layout_constraintTop_toBottomOf="@+id/rv_category"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tv_popular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -49,42 +50,42 @@
             android:layout_weight="1"/>
 
         <TextView
-            android:id="@+id/popular_all"
+            android:id="@+id/tv_popular_all"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:textSize="20sp"
-            android:text="View All"
+            android:text="@string/view_all_filter"
             />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/popular_recycler_view"
+    android:id="@+id/rv_popular"
     style="@style/recycler_standard"
-    app:layout_constraintTop_toBottomOf="@+id/popular_row"
+    app:layout_constraintTop_toBottomOf="@+id/ll_popular"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     />
 
 <!--    Recent add-->
     <TextView
-        android:id="@+id/text_most_recent"
+        android:id="@+id/tv_most_recent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Most Recent"
+        android:text="@string/most_recent_title"
         android:textStyle="bold"
         android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/popular_recycler_view"
+        app:layout_constraintTop_toBottomOf="@+id/rv_popular"
         />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recent_recycler_view"
+        android:id="@+id/rv_recent"
         style="@style/recycler_standard"
-        app:layout_constraintTop_toBottomOf="@+id/text_most_recent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_most_recent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         />

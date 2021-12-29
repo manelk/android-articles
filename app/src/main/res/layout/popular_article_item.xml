@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="200dp"
     android:layout_height="wrap_content"
-    android:layout_marginRight="20dp"
+    android:layout_marginEnd="20dp"
     android:id="@+id/popular_card"
     >
 
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/coverImage"
+            android:id="@+id/image_cover_popular"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:src="@drawable/dogs"
@@ -24,7 +24,8 @@
             android:scaleType="centerCrop"
             android:adjustViewBounds="true"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/image_cover_popular" />
 
 
 
@@ -36,12 +37,12 @@
             android:gravity="center">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/user_image"
+                android:id="@+id/image_user_popular"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:src="@drawable/profile00"
                 app:civ_border_color="#FF000000"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
 
                 />
 
@@ -49,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:id="@+id/user_name"
+                    android:id="@+id/tv_username_popular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/women_name"/>
@@ -60,12 +61,12 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:id="@+id/post_date"
+                    android:id="@+id/tv_post_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#8d8d8d"
+                    android:text="@string/article_hours_read"
 
-                    android:text="14h"/>
+                    android:textColor="#757575" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -74,12 +75,12 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <TextView
-            android:id="@+id/post_title"
+            android:id="@+id/tv_post_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="15dp"
-            android:text="Dog owners live Long and are more protected from danger"/>
+            android:textSize="15sp"
+            android:text="@string/article_title_popular"/>
 
 
 <androidx.appcompat.widget.LinearLayoutCompat
@@ -90,12 +91,11 @@
     >
 
     <TextView
-        android:id="@+id/post_type"
+        android:id="@+id/tv_post_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="sport"
-        android:textColor="#8d8d8d"
-        />
+        android:text="@string/article_category"
+        android:textColor="#757575" />
 
     <View
         android:layout_width="0dp"
@@ -103,16 +103,18 @@
         android:layout_weight="1"/>
 
     <TextView
-        android:id="@+id/post_likes"
+        android:id="@+id/tv_post_likes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="239"
+        android:text="@string/article_stars_number"
         />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" ⭐"
-        />
+        android:text="@string/article_star"
+        android:textColor="#827717"
+        tools:ignore="TextContrastCheck" />
 
 
 

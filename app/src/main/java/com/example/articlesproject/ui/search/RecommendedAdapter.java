@@ -87,11 +87,11 @@ public class RecommendedAdapter extends  RecyclerView.Adapter<RecommendedAdapter
 
     public ViewHolder(@NonNull View itemView) {
         super(itemView);
-        rec_user_image = itemView.findViewById(R.id.rec_user_image);
-        rec_cover = itemView.findViewById(R.id.rec_cover);
-        rec_user_name = itemView.findViewById(R.id.rec_user_name);
-        rec_title = itemView.findViewById(R.id.rec_title);
-        recommended_card = itemView.findViewById(R.id.recommended_card);
+        rec_user_image = itemView.findViewById(R.id.image_user_recommeded);
+        rec_cover = itemView.findViewById(R.id.image_recommended_cover);
+        rec_user_name = itemView.findViewById(R.id.tv_user_recommended);
+        rec_title = itemView.findViewById(R.id.tv_recommended_title);
+        recommended_card = itemView.findViewById(R.id.llc_recommended_card);
 
 
 
