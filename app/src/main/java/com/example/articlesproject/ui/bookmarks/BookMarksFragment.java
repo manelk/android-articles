@@ -16,7 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.articlesproject.R;
-import com.example.articlesproject.model.Bookmark;
+import com.example.articlesproject.model.Article;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,20 +40,15 @@ public class BookMarksFragment extends Fragment {
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(dividerItemDecoration);
 
-        Bookmark bookmarkModel = new Bookmark("10 Web Application Ideas for Businesses", "DevWerkz", R.drawable.old_women_dog);
-        Bookmark bookmarkModel1 = new Bookmark("10 Web Application  for Businesses", "DevWerkz", R.drawable.old_women_dog);
-        Bookmark bookmarkModel2 = new Bookmark("10 Web  Ideas for Businesses", "DevWerkz", R.drawable.old_women_dog);
 
 
-        List<Bookmark> bookmarksData = new ArrayList<>();
-        bookmarksData.add(bookmarkModel);
-        bookmarksData.add(bookmarkModel1);
-        bookmarksData.add(bookmarkModel2);
-        bookmarksData.add(bookmarkModel);
-        bookmarksData.add(bookmarkModel1);
-        bookmarksData.add(bookmarkModel2);
+        List<Article> data = new ArrayList<>();
+        data.add(new Article("Why the Last Week of the Year is Crucial to Our Success", "Rachella Angel", "14h", "Time Management", "50", R.drawable.alison_cover_image, R.drawable.profile00, "TESTTTT", R.drawable.rachella_body_image));
+        data.add(new Article("How to Read More as a Working Parent", "Alison McBain", "1h", "Reading", "20", R.drawable.alison_cover_image, R.drawable.profile01, "TESTTTT", R.drawable.alison_body_image));
+        data.add(new Article("Product Manager vs. Project Manager", "Julius Uy", "24h", "Product Management", "30", R.drawable.julius_body_image, R.drawable.profile04, "TESTTTT", R.drawable.julius_body_image));
 
-        CustomAdapter adapter = new CustomAdapter(bookmarksData);
+
+        CustomAdapter adapter = new CustomAdapter(data);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
