@@ -32,12 +32,12 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_details);
 
 //
-        ImageView coverImage = findViewById(R.id.details_cover_image);
-        ImageView userImage = findViewById(R.id.details_user_image);
-        TextView userName = findViewById(R.id.details_user_name);
-        TextView title = findViewById(R.id.details_title);
-        TextView detailsDescription = findViewById(R.id.details_description);
-        ImageView detailsImage = findViewById(R.id.details_image);
+        ImageView coverImage = findViewById(R.id.image_details_cover);
+        ImageView userImage = findViewById(R.id.image_details_user);
+        TextView userName = findViewById(R.id.tv_details_username);
+        TextView title = findViewById(R.id.tv_details_title);
+        TextView detailsDescription = findViewById(R.id.tv_details_description);
+        ImageView detailsImage = findViewById(R.id.image_details);
 
         String data = getIntent().getStringExtra("data");
 

@@ -18,8 +18,8 @@ public class UserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
 
-        ImageView backbtn = findViewById(R.id.icon_back_btn);
-        TextView username  = findViewById(R.id.profile_user_name);
+        ImageView backbtn = findViewById(R.id.image_back_btn);
+        TextView username  = findViewById(R.id.tv_username_profile);
 
         String name = getIntent().getStringExtra("name");
         username.setText(name);

@@ -100,13 +100,13 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
             super(item);
             popularCard = item.findViewById(R.id.popular_card);
 
-            stars = item.findViewById(R.id.post_likes);
-            category = item.findViewById(R.id.post_type);
-            createdAt = item.findViewById(R.id.post_date);
-            title = item.findViewById(R.id.post_title);
-            name = item.findViewById(R.id.user_name);
-            coverImage = item.findViewById(R.id.coverImage);
-            profileImage = item.findViewById(R.id.user_image);
+            stars = item.findViewById(R.id.tv_post_likes);
+            category = item.findViewById(R.id.tv_post_type);
+            createdAt = item.findViewById(R.id.tv_post_date);
+            title = item.findViewById(R.id.tv_post_title);
+            name = item.findViewById(R.id.tv_username_popular);
+            coverImage = item.findViewById(R.id.image_cover_popular);
+            profileImage = item.findViewById(R.id.image_user_popular);
         }
     }
 }

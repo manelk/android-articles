@@ -70,11 +70,11 @@ public class CustomAdapter  extends RecyclerView.Adapter<CustomAdapter.ViewHolde
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            author = itemView.findViewById(R.id.ba_author_name);
-            title = itemView.findViewById(R.id.ba_title);
-            image = itemView.findViewById(R.id.ba_image);
-            type = itemView.findViewById(R.id.post_type);
-            stars = itemView.findViewById(R.id.post_stars);
+            author = itemView.findViewById(R.id.tv_bookmark_author);
+            title = itemView.findViewById(R.id.tv_bookmark_title);
+            image = itemView.findViewById(R.id.image_bookmark_cover);
+            type = itemView.findViewById(R.id.tv_bookmark_type);
+            stars = itemView.findViewById(R.id.tv_bookmark_stars);
 }
 
 public void goToDetails(Article selected){
