@@ -24,8 +24,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/user_image"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/logo_size"
+                android:layout_height="@dimen/logo_size"
                 android:src="@drawable/profile00" />
 
             <TextView
@@ -46,8 +46,8 @@
             app:layout_constraintTop_toBottomOf="@+id/profile_row">
 
             <ImageButton
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/icon_size_48"
+                android:layout_height="@dimen/icon_size_48"
                 android:background="@null"
                 android:contentDescription="TODO"
                 android:src="@drawable/ic_person_24" />
@@ -55,7 +55,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
                 android:text="My Account" />
 
             <View
@@ -64,8 +64,8 @@
                 android:layout_weight="1" />
 
             <ImageButton
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/icon_size_48"
+                android:layout_height="@dimen/icon_size_48"
                 android:background="@null"
                 android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                 tools:ignore="SpeakableTextPresentCheck" />
@@ -80,9 +80,9 @@
             app:layout_constraintTop_toBottomOf="@+id/my_account_row">
 
             <ImageButton
-                android:layout_width="48dp"
+                android:layout_width="@dimen/icon_size_48"
 
-                android:layout_height="48dp"
+                android:layout_height="@dimen/icon_size_48"
                 android:background="@null"
                 android:contentDescription="TODO"
                 android:src="@drawable/ic_baseline_star_border_24"
@@ -100,10 +100,10 @@
                 android:layout_weight="1" />
 
             <ImageButton
-                android:layout_width="48dp"
+                android:layout_width="@dimen/icon_size_48"
 
 
-                android:layout_height="48dp"
+                android:layout_height="@dimen/icon_size_48"
                 android:background="@null"
                 android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                 tools:ignore="SpeakableTextPresentCheck" />
@@ -119,8 +119,8 @@
             app:layout_constraintTop_toBottomOf="@+id/interests_row">
 
             <ImageButton
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/icon_size_48"
+                android:layout_height="@dimen/icon_size_48"
                 android:background="@null"
                 android:contentDescription="TODO"
                 android:src="@drawable/ic_outline_settings_24"
@@ -138,8 +138,8 @@
                 android:layout_weight="1" />
 
             <ImageButton
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/icon_size_48"
+                android:layout_height="@dimen/icon_size_48"
                 android:background="@null"
                 android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                 />
@@ -156,9 +156,9 @@
             app:layout_constraintTop_toBottomOf="@+id/settings_row">
 
             <ImageButton
-                android:layout_width="48dp"
+                android:layout_width="@dimen/icon_size_48"
 
-                android:layout_height="48dp"
+                android:layout_height="@dimen/icon_size_48"
                 android:background="@null"
                 android:contentDescription="TODO"
                 android:src="@drawable/ic_baseline_login_24"
@@ -184,8 +184,8 @@
             app:layout_constraintTop_toBottomOf="@+id/logout_row">
 
             <ImageButton
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/icon_size_48"
+                android:layout_height="@dimen/icon_size_48"
                 android:background="@null"
                 android:contentDescription="TODO"
                 android:src="@drawable/ic_outline_bug_report_24"
@@ -210,8 +210,8 @@
             app:layout_constraintTop_toBottomOf="@+id/feed_back_row">
 
             <ImageButton
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/icon_size_48"
+                android:layout_height="@dimen/icon_size_48"
                 android:background="@null"
                 android:contentDescription="TODO"
                 android:src="@drawable/ic_baseline_privacy_tip_24"

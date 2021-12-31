@@ -161,6 +161,13 @@
     <string name="total_followers">1200 Followers</string>
     <string name="image_back_btn">TODO</string>
     <string name="cd_image_recommended_cover">TODO</string>
+    <string name="password">Password</string>
+    <string name="email_hint">Write your email</string>
+    <string name="login">Login</string>
+    <string name="signup">Signup</string>
+    <string name="logo">logo</string>
+    <string name="username_hint">Write your user name</string>
+    <string name="submit">Submit</string>
 
 
 </resources>

@@ -36,7 +36,7 @@ public class SearchFragment extends Fragment {
         View root =  inflater.inflate(R.layout.search_fragment, container, false);
 
         //        categories
-        categoryRecycler = root.findViewById(R.id.search_category_recycler);
+        categoryRecycler = root.findViewById(R.id.rv_search_category);
 
         List<String> categories = new ArrayList<>();
         categories.add("Tech");
@@ -54,7 +54,7 @@ public class SearchFragment extends Fragment {
         categoryRecycler.setAdapter(categoryAdapter);
 
     //Recommended
-        recommendedRecycler = root.findViewById(R.id.recomended_recycler_view);
+        recommendedRecycler = root.findViewById(R.id.rv_search_recommended);
 
         List<Article> data = new ArrayList<>();
         data.add(new Article("Why the Last Week of the Year is Crucial to Our Success", "Rachella Angel", "14h", "Time Management", "50", R.drawable.rachella_cover_image, R.drawable.rachella_angel_profile, "I have always loved the last week of the year, the closing of one book leading to the opening of the next one. However, I’ve been pickier about using the time given in the past few years. While I try to make the best of every day, I focus on this week, maybe more than other weeks of the year. So here are three ways to make the best use of the transition period.", R.drawable.rachella_body_image));
