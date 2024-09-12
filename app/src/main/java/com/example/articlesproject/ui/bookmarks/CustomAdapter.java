@@ -1,32 +1,36 @@
 package com.example.articlesproject.ui.bookmarks;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.util.AttributeSet;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.articlesproject.R;
+import com.example.articlesproject.model.Article;
+import com.example.articlesproject.model.Bookmark;
+import com.example.articlesproject.ui.details.DetailsActivity;
+
+import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class CustomAdapter  extends RecyclerView.Adapter<CustomAdapter.ViewHolder>{
 
 
-    private List<BookmarkModel> bookmarks = new ArrayList<>();
+    private List<Article> bookmarks = new ArrayList<>();
 
 
 
-    public CustomAdapter(List<BookmarkModel> bookmarks) {
+    public CustomAdapter(List<Article> bookmarks) {
         this.bookmarks = bookmarks;
     }
 
@@ -41,63 +45,62 @@ public class CustomAdapter  extends RecyclerView.Adapter<CustomAdapter.ViewHolde
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final BookmarkModel bookmark = bookmarks.get(position);
+        final Article bookmark = bookmarks.get(position);
         holder.title.setText(bookmark.getTitle());
-        holder.author.setText(bookmark.getAuthor());
-        holder.image.setImageResource(bookmark.getImage());
+        holder.author.setText(bookmark.getName());
+        holder.image.setImageResource(bookmark.getCoverImage());
+        holder.type.setText(bookmark.getCategory());
+        holder.stars.setText(bookmark.getStars());
+
+//actions
+        holder.goToDetails(bookmark);
     }
 
     @Override
     public int getItemCount() {
         return bookmarks.size();
     }
+    
+
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private final TextView author, title;
+        private final TextView author, title, type, stars;
         private final ImageView image;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            author = itemView.findViewById(R.id.ba_author_name);
-            title = itemView.findViewById(R.id.ba_title);
-            image = itemView.findViewById(R.id.ba_image);
+            author = itemView.findViewById(R.id.tv_bookmark_author);
+            title = itemView.findViewById(R.id.tv_bookmark_title);
+            image = itemView.findViewById(R.id.image_bookmark_cover);
+            type = itemView.findViewById(R.id.tv_bookmark_type);
+            stars = itemView.findViewById(R.id.tv_bookmark_stars);
+}
+
+public void goToDetails(Article selected){
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent detailIntent = new Intent(author.getContext() , DetailsActivity.class);
+                    try {
+                        detailIntent.putExtra("data", selected.toJson().toString());
+                        author.getContext().startActivity(detailIntent);
+
+                    } catch (JSONException e) {
+//                    e.printStackTrace();
+                        Toast.makeText(author.getContext(), "" + e, Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            });
+
+
         }
+
     }
 }
 
 
-class BookmarkModel{
-    private String title, author;
-    private int image;
 
-    public BookmarkModel(String title, String author, int image) {
-        this.title = title;
-        this.author = author;
-        this.image = image;
-    }
 
-    public String getTitle() {
-        return title;
-    }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public int getImage() {
-        return image;
-    }
-
-    public void setImage(int image) {
-        this.image = image;
-    }
-}

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="15dp"
-    android:paddingStart="15dp"
-    android:paddingEnd="15dp"
-    >
+    android:paddingTop="@dimen/normal_15"
+    android:paddingHorizontal="@dimen/normal_15"
+    android:id="@+id/llc_recommended_card">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayoutCompat"
@@ -21,7 +19,7 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="15dp">
+            android:layout_marginEnd="@dimen/normal_15">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
@@ -29,16 +27,17 @@
                 android:orientation="horizontal">
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/user_image"
+                    android:id="@+id/image_user_recommeded"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:layout_marginEnd="15dp"
+                    android:layout_marginEnd="@dimen/normal_15"
                     android:src="@drawable/profile04"
-                    app:civ_border_color="#FF000000"
+                    app:civ_border_color="@color/black"
 
                     />
 
                 <TextView
+                    android:id="@+id/tv_user_recommended"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/profile_name00" />
@@ -47,9 +46,10 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <TextView
+            android:id="@+id/tv_recommended_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="@dimen/normal_15"
             android:text="@string/post_title_00"
             android:textSize="19sp"
             android:textStyle="bold" />
@@ -58,11 +58,10 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-
-        android:contentDescription="TODO"
+        android:id="@+id/image_recommended_cover"
+        android:layout_width="@dimen/logo_size"
+        android:layout_height="@dimen/logo_size"
+        android:contentDescription="@string/cd_image_recommended_cover"
         android:scaleType="centerCrop"
         android:src="@drawable/old_women_dog"
         app:civ_border_width="2dp"
